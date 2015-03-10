@@ -1,0 +1,14 @@
+{
+  "node": true,
+  "strict": true,
+  "browser" : true,
+  "globals": {
+    "require": true,
+    "define": true,
+    "Promise": true
+  },
+  "devel": true,
+  "supernew": true,
+  "-W065": true,
+  "-W069": true
+}

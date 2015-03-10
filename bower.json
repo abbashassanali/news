@@ -1,0 +1,22 @@
+{
+  "name": "news",
+  "version": "0.0.0",
+  "homepage": "https://github.com/abbashassanali/news",
+  "authors": [
+    "Abbas Hassanali <abbas.hassanali@jayway.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "knockout": "~3.3.0",
+    "knockout-postbox": "~0.4.2",
+    "lodash": "~3.5.0"
+  }
+}
