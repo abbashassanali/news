@@ -1,8 +1,27 @@
 body, html {
   height: 100%;
-  background-color: #e5e5e5;
 }
 
 .page-wrap {
   height: 100%;
+}
+
+#top {
+	position: absolute;
+	background-color: #e5e5e5;
+	height: 40px;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.menu {
+	display: none;
+	background-color: black;
+	margin-top: 40px;
+	height: 100px;
+	width: 100%;
+}
+
+.main {
+	padding-top: 40px;
 }

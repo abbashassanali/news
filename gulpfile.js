@@ -4,10 +4,12 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     source = require('vinyl-source-stream'),
     browserify = require('browserify'),
+    brfs = require('brfs'),
     paths = {
         src : {
             scriptsEntry: './app/scripts/app.js',
-            html: 'app/index.html',
+            html: 'app/**/*.html',
+            scripts: 'app/scripts/**/*.js',
             css: 'app/css/style.css'
         },
         dist : {
@@ -37,6 +39,9 @@ gulp.task('build-scripts', function () {
       entries: paths.src.scriptsEntry,
       debug: true
     })
+    .transform({
+       global: true
+    }, brfs)
     .bundle()
     .pipe(source(paths.dist.scripts))
     .pipe(gulp.dest(paths.dist.dir))
@@ -53,7 +58,7 @@ gulp.task('copy-static', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.src.html, ['copy-static']);
+    gulp.watch(paths.src.html, ['copy-static', 'build-scripts']);
     gulp.watch(paths.src.css, ['copy-static']);
-    gulp.watch(paths.src.scriptsEntry, ['build-scripts']);
+    gulp.watch(paths.src.scripts, ['build-scripts']);
 });

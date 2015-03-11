@@ -1,0 +1,9 @@
+<div data-bind="foreach: news">
+	<a data-bind="text: title, attr: {href: mobileUrl}"></a>
+	<p data-bind="text: description"></p>
+	<!-- ko if: imageUrl -->
+	<img data-bind="attr: {src: imageUrl}"></img>
+	<!-- /ko -->
+	<p data-bind="text: friendlyDateShort"></p>
+	<hr>
+</div>
