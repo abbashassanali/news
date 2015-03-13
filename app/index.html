@@ -2,19 +2,52 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Nyheter</title>
+	<title>Testar</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="style.css">
 </head>
-<div class="page-wrap">
-	<header id="top" role="banner">
-		<nav role="naviagtion">
-		<div class="menu">
-
+<body class>
+	<header class="nav-bar">
+		<div class="nav-bar-inner">
+			<button class="header-button" data-bind="click: toggleMenu">
+				<img id="menu-img" src="assets/menu.svg" alt="menu" />
+			</button>
 		</div>
+		<nav class="nav-bar-tabs" data-bind="css: { 'nav-bar-tabs-is-open': menuBtnVal}">
+			<ul>
+			 	<li>
+			 		<a href="/#">
+			 			<span class="menu-items">Start</span>
+			 		</a>
+			 	</li>
+			 	<li>
+			 		<a href="/#domestic">
+			 			<span class="menu-items">Inrikes</span>
+			 		</a>
+			 	</li>
+			 	<li>
+			 		<a href="/#foreign">
+			 			<span class="menu-items">Utikres</span>
+			 		</a>
+			 	</li>
+			 	<li>
+			 		<a href="/#sport">
+			 			<span class="menu-items">Sport</span>
+			 		</a>
+			 	</li>
+			 	<li>
+			 		<a href="/#economy">
+			 			<span class="menu-items">Näringsliv</span>
+			 		</a>
+			 	</li>
+			</ul>
+		</nav>
 	</header>
-	<div class="main" data-bind='component: "news-component"'></div>
-</div>
-<script src="bundle.js"></script>
+
+	<div class="main">
+		<!-- ko component: "news-component" -->
+		<!-- /ko -->
+	</div>
+	<script src="bundle.js"></script>
 </body>
 </html>

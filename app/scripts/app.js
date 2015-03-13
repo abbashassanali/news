@@ -1,11 +1,14 @@
 'use strict';
 
 var ko = require("knockout"),
-	newsWidget = require("./news/newsWidget");
+	newsWidget = require("./news/newsComponent");
+	window.ko = ko;
 
-ko.components.register('news-component', {
-    viewModel: newsWidget.viewModel,
-    template: newsWidget.template.toString()
-});
+var viewModel = {
+	menuBtnVal: ko.observable(false),
+	toggleMenu: function() {
+		this.menuBtnVal(!this.menuBtnVal());
+	}
+};
 
-ko.applyBindings();
+ko.applyBindings(viewModel);

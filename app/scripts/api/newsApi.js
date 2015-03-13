@@ -9,11 +9,11 @@ var newsApi = {
 };
 
 var apiCalls = {
-	showAll: "http://www.svd.se/search.do?q=&sort=date&output=json&start=0&rows=30",
+	showAll: "http://www.svd.se/search.do?q=&sort=date&output=json&start=0&rows=29",
 	domestic: "",
 	foreign: "",
 	sport: "",
-	culture: ""
+	economy: ""
 };
 
 module.exports = newsApi;

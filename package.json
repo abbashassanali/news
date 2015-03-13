@@ -12,7 +12,8 @@
     "vinyl-source-stream": "^1.1.0",
     "gulp-connect": "^2.2.0",
     "knockout": "^3.3.0",
-    "brfs": "^1.4.0"
+    "brfs": "^1.4.0",
+    "knockout-postbox": "^0.4.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

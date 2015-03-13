@@ -15,6 +15,7 @@ var getNews = function(){
 function createNewsModel(newsData) {
 	var newsModel = {
 		title: newsData.title,
+		section: newsData.section,
 		description: newsData.description,
 		friendlyDateShort: newsData.friendlyDateShort,
 		mobileUrl: newsData.mobileUrl,
